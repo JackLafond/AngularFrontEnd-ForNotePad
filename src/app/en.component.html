@@ -1,0 +1,15 @@
+<div class = "block">
+    <div class="header">
+        <h3>{{title + ' - ' + date}}</h3>
+    </div>
+    <div class="body">
+        <div class = "details">
+            <p>{{details}}</p>
+        </div>
+        <div class = "checkarea">
+            <div class = "checkboxes" *ngFor='let checkbox of checkboxes'>
+                <input type="checkbox">{{checkbox}}
+            </div>
+        </div>
+    </div>
+</div>

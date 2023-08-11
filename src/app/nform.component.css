@@ -1,0 +1,55 @@
+h1 {
+    font-family:Arial, Helvetica, sans-serif;
+    font: Helvetica;
+    color:#1f1f1f;
+    padding: 40px;
+    margin: 0px;
+    font-size: 25px;
+}
+
+label, div[class=check] {
+    font-family:Arial, Helvetica, sans-serif;
+    font: Helvetica;
+    width: 100%;
+    padding: 0px 60px;
+    margin: 10px 0px;
+    display: inline-block;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input {
+    font-family:Arial, Helvetica, sans-serif;
+    font: Helvetica;
+    width: 100%;
+    padding: 20px 60px;
+    margin: 10px 0px;
+    display: inline-block;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 20px
+}
+  
+button {
+    width:fit-content;
+    align-self: center;
+    background-color: #cbcbd1;
+    color: white;
+    padding: 14px 60px;
+    margin: 16px 60px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover:valid, button[class=checkboxButton]:hover{
+    background-color: #3B0D11;
+}
+
+button:valid, button[class=checkboxButton]{
+    background-color: #947d7d;
+}
+
+div {
+    background-color: #E8E8EE;
+}

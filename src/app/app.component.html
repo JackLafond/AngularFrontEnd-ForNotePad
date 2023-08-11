@@ -1,0 +1,20 @@
+<div class = "header">
+    <h1>Note Pad</h1>
+    <p>An app that totaly doesn't exist where you can store all of your notes</p>
+</div>
+<nav class='navbar navbar-expand navbar-light bg-light'>
+  <ul class='navbar-nav'>
+    <li class='nav-item'><a class='nav-link' routerLinkActive='active'
+          [routerLink]="['/notes']">My Notes</a>
+    </li>
+    <li class='nav-item'><a class='nav-link' routerLinkActive='active' [routerLinkActiveOptions]="{exact: true}"
+          [routerLink]="['/addnote']">New Note</a>
+    </li>
+    <li class='nav-item'><a class='nav-link' routerLinkActive='active' [routerLinkActiveOptions]="{exact: true}"
+      [routerLink]="['/editnote']">Edit Note</a>
+    </li>
+  </ul>
+</nav>
+<div class='container'>
+  <router-outlet></router-outlet>
+</div>

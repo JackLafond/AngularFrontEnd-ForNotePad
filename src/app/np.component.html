@@ -1,0 +1,8 @@
+<h1>My Notes</h1>
+
+<div class="cardcontainer">
+    <div class="card" *ngFor='let note of noteList'>
+        <note-entry [title]='note.title' [date]='note.date' [details]='note.details' [checkboxes]='note.checkboxes' [id]='note.id'></note-entry>
+        <button class="delete" (click)='removeNote(note.id)'>Delete</button>
+    </div>
+</div>

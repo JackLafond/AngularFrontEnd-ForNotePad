@@ -1,0 +1,55 @@
+
+.nav {
+    display: inline-block;
+}
+
+h1 {
+    font-family:Arial, Helvetica, sans-serif;
+    font: Helvetica;
+    color:#1f1f1f;
+    padding: 40px;
+    margin: 0px;
+    font-size: 25px;
+    background-color: #E8E8EE;
+}
+
+button {
+    border-radius: 4px;
+    border-width: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    font: Helvetica;
+    font-size: 20px;
+    color: #E8E8EE;
+    background-color: #1f1f1f;
+    padding: 10px 20px 10px 20px;
+    margin: 5px;
+    align-self: flex-start;
+}
+
+.cardcontainer {
+
+    display:flex;
+    flex-direction:row;
+    background-color: #E8E8EE;
+    height:fit-content;
+    flex-wrap:wrap;
+    align-items: stretch;
+    gap: 10px 30px;
+    padding-left: 30px;
+
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.card note-entry {
+    border-radius: 4px;
+}
+/*to hide the scrollbars*/
+::-webkit-scrollbar {
+    display: none;
+}

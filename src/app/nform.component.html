@@ -1,0 +1,81 @@
+<div class = "nform">
+
+    <h1>New Note</h1>
+
+    <div class="body">
+
+        <form [formGroup]="noteForm" novalidate (ngSubmit)="save()">
+
+            <div class="formGroup">
+
+                <div class="attribute">
+                    <label>Title
+                        <input class="entry" formControlName="title">
+                    </label>
+                    <div *ngIf="noteForm.controls['title'].invalid && (noteForm.controls['title'].dirty || noteForm.controls['title'].touched)" class="alert">
+                        <div class="check" *ngIf="noteForm.controls['title'].errors?.required">
+                            Please enter a title
+                        </div>
+                    </div>
+                </div>
+
+                <div class="attribute">
+                    <label>Date
+                        <input class="entry" formControlName="date">
+                    </label>
+                    <div *ngIf="noteForm.controls['date'].invalid && (noteForm.controls['date'].dirty || noteForm.controls['date'].touched)" class="alert">
+                        <div class="check" *ngIf="noteForm.controls['date'].errors?.required">
+                            Please enter a date
+                        </div>
+                    </div>
+                </div>
+
+                <div class="attribute">
+                    <label>Details
+                        <input class="entry" formControlName="details">
+                    </label>
+                    <div *ngIf="noteForm.controls['details'].invalid && (noteForm.controls['details'].dirty || noteForm.controls['details'].touched)" class="alert">
+                        <div class="check" *ngIf="noteForm.controls['details'].errors?.required">
+                            Please enter some details
+                        </div>
+                    </div>
+                </div>
+
+                <ng-container formArrayName="checkboxes">
+                    <div class="attribute" *ngFor="let check of checkboxFormArray.controls; index as i">
+                        <label>Checkbox Title {{i + 1}}
+                            <input class="entry" [formControlName]="i">
+                        </label>
+                        <div *ngIf="noteForm.controls['checkboxes'].invalid && (noteForm.controls['checkboxes'].dirty || noteForm.controls['checkboxes'].touched)" class="alert">
+                            <div class="check" *ngIf="checkMissing(i)">
+                                Please enter a checkbox title
+                            </div>
+                        </div>
+                    </div>
+                </ng-container>
+            </div>
+
+
+            <div class="checkboxButtons">
+                <button class="checkboxButton" (click)="addCheckbox()" type="button">
+                    Add Checkbox
+                </button>
+            
+                <button class="checkboxButton" (click)="deleteCheckbox()" type="button">
+                    Remove Checkbox
+                </button>
+            </div>
+
+            <div class="save">
+                <button class="save"
+                        type = "submit"
+                        name = "save"
+                        [title]="noteForm.valid ? 'Save new note' : 'Disabled until form is valid'"
+                        [disabled]="!noteForm.valid">
+                Save
+                </button>
+            </div>
+
+        </form>
+    </div>
+</div>

@@ -1,0 +1,20 @@
+.block .header {
+    margin: 4px;
+    font-size: 20px;
+    background-color: #947d7d;
+    border-radius: 4px;
+    color: #E8E8EE;
+    padding: 5px 30px 5px 20px;
+}
+
+.block {
+    font-family:Arial, Helvetica, sans-serif;
+    font: Helvetica;
+    font-size: 20px;
+    color: #1F1F1F;
+    margin-bottom: 20px;
+}
+
+p, .checkboxes {
+    padding: 0px 20px 0px 20px;
+}
